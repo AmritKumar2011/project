@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie Hub</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#111;
+  color:white;
+}
+
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+  background:black;
+}
+nav h2{color:orange;}
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80') center/cover;
+  display:flex;
+  align-items:center;
+  padding-left:50px;
+}
+.hero h1{
+  font-size:50px;
+}
+.hero span{color:orange;}
+
+.btn{
+  background:orange;
+  color:black;
+  padding:12px 20px;
+  border:none;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+/* SECTION */
+
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+
+/* MENU */
+.menu{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.card{
+  background:#222;
+  padding:20px;
+  width:260px;
+  border-radius:12px;
+}
+.card img{
+  width:100%;
+  height:160px;
+
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* GALLERY */
+.gallery{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.gallery img{
+  width:250px;
+  height:160px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+  background:black;
+
+  padding:20px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <h2>Demo Website(Just for Understanding Purpose and No Button will Work)</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+
+  <div>
+    <h1>DELICIOUS FOOD <span>FOR YOU</span></h1>
+    <p>Fresh & Tasty meals delivered fast</p>
+    <button class="btn" onclick="orderNow()">Order Now</button>
+  </div>
+</div>
+
+<!-- MENU -->
+<section id="menu">
+  <h1>Our Menu</h1>
+  <div class="menu">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80">
+      <h3>Burger</h3>
+
+      <p>₹120</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?auto=format&fit=crop&w=800&q=80">
+      <h3>Pizza</h3>
+      <p>₹250</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80">
+      <h3>Cold Drink</h3>
+      <p>₹50</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h1>Gallery</h1>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?auto=format&fit=crop&w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <h1>Contact</h1>
+  <p>📞 8093962891</p>
+  <p>📍 Bhubaneswar</p>
+</section>
+
+<footer>
+  <p>© 2026 Foodie Hub</p>
+</footer>
+
+<script>
+function orderNow(){
+  window.location.href="https://wa.me/918093962891?text=I%20want%20to%20develop%20my%20website%20from%20you";
+}
+</script>
+
+</body>
+</html>

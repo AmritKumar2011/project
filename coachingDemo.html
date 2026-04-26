@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Future Coaching</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0a0a0a;
+  color:white;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
+}
+
+nav h2{color:#00c3ff;}
+
+nav a{
+  color:white;
+
+  margin:0 10px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#00c3ff;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+}
+
+.hero h1{
+  font-size:55px;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero span{color:#00c3ff;}
+
+.btn{
+  background:#00c3ff;
+  color:black;
+  padding:12px 25px;
+  border:none;
+  margin-top:20px;
+  cursor:pointer;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.btn:hover{
+
+  background:white;
+  transform:scale(1.05);
+}
+
+/* SECTION */
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+/* COURSES */
+.courses{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+
+  width:260px;
+  border-radius:15px;
+  backdrop-filter: blur(10px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* PRICING */
+.pricing{
+  display:flex;
+  justify-content:center;
+
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.price-box{
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  width:250px;
+  border-radius:15px;
+  backdrop-filter: blur(10px);
+  transition:0.3s;
+}
+
+.price-box:hover{
+  transform:scale(1.05);
+}
+
+.price-box h2{
+  color:#00c3ff;
+  font-size:28px;
+}
+
+
+/* CONTACT */
+#contact p{
+  margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+  background:black;
+  padding:20px;
+  text-align:center;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+
+<body>
+
+<nav>
+  <h2>Demo Website(Just for Understanding Purpose and No Button will Work)</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#pricing">Fees</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero" id="home">
+  <div>
+    <h1>BEST COACHING FOR <span>CLASS 8–12</span></h1>
+    <p>Build your future with expert teachers</p>
+    <button class="btn" onclick="contactNow()">Enroll Now</
+
+button>
+  </div>
+</div>
+
+<section id="courses">
+  <h1>Our Courses</h1>
+
+  <div class="courses">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606326608690-4e0281b1e588?auto=format&fit=crop&w=800&q=80">
+      <h3>Mathematics</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?
+
+auto=format&fit=crop&w=800&q=80">
+      <h3>Science</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=800&q=80">
+      <h3>English</h3>
+    </div>
+
+  </div>
+</section>
+
+<section id="pricing">
+  <h1>Fees Structure</h1>
+
+  <div class="pricing">
+    <div class="price-box">
+      <h2>₹1000</h2>
+
+      <p>1 Subject / Month</p>
+    </div>
+
+    <div class="price-box">
+      <h2>₹2500</h2>
+      <p>All Subjects / Month</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h1>Contact Us</h1>
+  <p>📞 8093962891</p>
+  <p>📍 Bhubaneswar</p>
+</section>
+
+<footer>
+  <p>© 2026 Bright Future Coaching</p>
+</footer>
+
+<script>
+
+function contactNow(){
+  window.location.href="https://wa.me/918093962891?text=I%20want%20to%20develop%20my%20website%20from%20you";
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerFit Gym</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background:#0a0a0a;
+  color:white;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:black;
+  position:sticky;
+  top:0;
+}
+
+nav h2{color:red;}
+
+nav a{
+  color:white;
+  margin:0 10px;
+
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  background:url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1600&q=80') center/cover;
+  display:flex;
+  align-items:center;
+  padding-left:50px;
+}
+
+.hero h1{
+  font-size:50px;
+}
+
+.hero span{color:red;}
+
+
+.btn{
+  background:red;
+  color:white;
+  padding:12px 20px;
+  border:none;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+/* SECTIONS */
+section{
+  padding:70px 20px;
+  text-align:center;
+}
+
+/* SERVICES */
+.services{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#111;
+  padding:20px;
+  width:260px;
+  border-radius:12px;
+}
+
+.card img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* PRICING */
+.pricing{
+  display:flex;
+  justify-content:center;
+
+  gap:30px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.price-box{
+  background:#111;
+  padding:30px;
+  width:260px;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(255,0,0,0.3);
+  transition:0.3s;
+}
+
+.price-box:hover{
+  transform:translateY(-8px);
+}
+
+.price-box h2{
+  color:red;
+}
+
+
+/* CALCULATOR */
+.calculator{
+  margin-top:40px;
+}
+
+.calculator select{
+  padding:12px;
+  width:220px;
+  border-radius:8px;
+  font-size:16px;
+  margin-top:10px;
+}
+
+#result{
+  margin-top:15px;
+  font-size:20px;
+  color:red;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.gallery img{
+  width:250px;
+  height:160px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+  background:black;
+  padding:20px;
+  text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <h2>Demo Website(Just for Understanding Purpose and No Button will Work)</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <div>
+    <h1>TRANSFORM YOUR BODY <span>TODAY</span></h1>
+    <p>Start your fitness journey with us</p>
+
+    <button class="btn">Join Now</button>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <h1>Our Services</h1>
+  <div class="services">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=800&q=80">
+      <h3>Weight Training</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?
+
+auto=format&fit=crop&w=800&q=80">
+      <h3>Cardio</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80">
+      <h3>Personal Training</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <h1>Pricing Plans</h1>
+  <p>Choose the best plan for your fitness</p>
+
+  <div class="pricing">
+
+    <div class="price-box">
+      <h2>₹1500</h2>
+      <p>1 Month</p>
+      <button class="btn">Choose</button>
+    </div>
+
+    <div class="price-box">
+      <h2>₹4000</h2>
+      <p>3 Months</p>
+      <button class="btn">Choose</button>
+    </div>
+
+  </div>
+
+  <!-- CALCULATOR -->
+  <div class="calculator">
+    <h2>Calculate Your Plan</h2>
+
+    <select id="months" 
+
+onchange="calculatePrice()">
+      <option value="1">1 Month</option>
+      <option value="2">2 Months (5% OFF)</option>
+      <option value="3">3 Months (10% OFF)</option>
+    </select>
+
+    <h3 id="result">Select months to see price</h3>
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+<section>
+  <h1>Gallery</h1>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=800&q=80">
+
+    <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h1>Contact</h1>
+  <p>📞 8093962891</p>
+  <p>📍 Bhubaneswar</p>
+</section>
+
+<footer>
+  <p>© 2026 PowerFit Gym</p>
+</footer>
+
+<script>
+
+function calculatePrice(){
+  let months=document.getElementById("months").value;
+  let price=1500;
+  let discount=0;
+
+  if(months==2){discount=0.05;}
+  if(months==3){discount=0.10;}
+
+  let total=price*months;
+  let final=total-(total*discount);
+
+  document.getElementById("result").innerText=
+  "Final Price: ₹"+final+" (Discount "+(discount*100)+"%)";
+}
+</script>
+
+</body>
+</html>
